@@ -1,0 +1,44 @@
+Win 8下的日和倉頡輸入法
+　在Windows 8或以上的微軟視窗作業系統中，傳統輸入法給微軟開發團隊來個大顛倒，過去的輸入法也無法再用。若要使用「日和倉頡」輸入法，輸入日文漢字和假名，須經以下步驟。
+
+下載「Yahoo!奇摩輸入法」v1.1.2535最新版。請依作業系統選擇32位元版或64位元版。
+
+開始安裝後，選「其他輸入法…」。建議把底下「將Yahoo!奇摩設為首頁」和「將Yahoo!奇摩設為預設搜尋引擎」選項的打勾消除，然後按「確定」。
+
+完成安裝後，必須重新啟動電腦。按「是」。
+
+下載「日和倉頡」外掛檔案（即*.cin文件），雙擊外掛檔案以自動安裝。若自動安裝失敗，請把*.cin文件抄至「(主機):\User\AppData\Roaming\Yahoo! KeyKey\DataTables\Generic」目錄下。
+
+切換至「Yahoo!奇摩輸入法」，在輸入法工具列上，按鐵鎚圖示旁的小箭嘴，選「偏好設定」。
+
+選「一般」書籤，在「基本功能」的「輸入法選單管理」下，勾選「倉頡日和」。
+
+選「泛用」書籤，在「一般設定」的「字根組合最大長度：」裏填上「5」。其餘選項則按個人喜好設定。若要像過去Windows 98或XP下的「日和倉頡」，建議在「打字功能」裏勾選「組字錯誤時清除字根」，但不要勾選「打到字根最大長度時立刻組字」、「使用動態字頻調整」、「空白鍵選第一字，第一選字鍵選第二字」。
+
+按「確定」便能開始使用。以Ctrl+Shift鍵開啟「Yahoo!奇摩輸入法」後，如果顯示着「倉頡」或其他輸入法，請單擊它，改選「[泛]倉頡日和」，就能使用「日和倉頡」輸入法。
+　然而，「Yahoo!奇摩輸入法」有一個名爲「一點通」的功能，可以透過快捷鍵「`」或「~」，開啟査字典或各種網絡搜尋功能。但這功能對一些朋友來說也挺不便。要取消這功能，可以到「(主機):\User\AppData\Roaming\Yahoo! KeyKey\」目錄下，打開「com.yahoo.KeyKey.OneKey.plist」這檔案，如下：
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>ShortcutKey</key>
+  <string>`</string>
+</dict>
+</plist>
+　只要把當中的「<string>`</string>」或「<string>~</string>」，更改成「<string>(換行)</string>」。如下：
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>ShortcutKey</key>
+  <string>
+</string>
+</dict>
+</plist>
+　這就可以關閉「一點通」功能。
+
+— 2015/04/18 01:55 +0800
+
+♪ 本作品以Creative Commons 署名-非商業性-相同方式共享 4.0授權條款授權。
